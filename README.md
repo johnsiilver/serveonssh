@@ -1,6 +1,6 @@
 # Serve On SSH
 
-[logo]: https://en.wikipedia.org/wiki/OpenSSH#/media/File:OpenSSH_logo.png
+![Open SSH Logo](https://en.wikipedia.org/wiki/OpenSSH#/media/File:OpenSSH_logo.png "Open SSH Logo")
 
 ## Introduction
 
