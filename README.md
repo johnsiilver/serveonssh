@@ -7,7 +7,7 @@ There is often a need to offer services for administrative purposes on servers o
 This package provides a `Proxy` type and a `Dialer` that can be used with HTTP/gRPC/... packages to serve connections behind SSH. In addition, we use Unix sockets for serving traffic, so there are no exposed ports on the server side. 
 
 This has several advantages for real world admin traffic:
-- SSH is much easier to setup that standard AAA for web services
+- SSH is much easier to setup than standard AAA for web services
 - SSH is probably already running
 - You can easily block SSH to servers from the public without complex filters
 
