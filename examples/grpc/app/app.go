@@ -37,7 +37,7 @@ func main() {
 		log.Fatalf("auth failure: %s", err)
 	}
 
-	f, dial, err := serveonssh.New(
+	f, err := serveonssh.New(
 		*endpoint,
 		*socket,
 		&ssh.ClientConfig{
@@ -55,7 +55,7 @@ func main() {
 	opts := []grpc.DialOption{
 		grpc.WithInsecure(),
 		grpc.WithDialer(func(addr string, timeout time.Duration) (net.Conn, error) {
-			return dial()
+			return f.Dialer()()
 		}),
 	}
 

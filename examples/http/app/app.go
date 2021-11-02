@@ -34,7 +34,7 @@ func main() {
 		log.Fatalf("auth failure: %s", err)
 	}
 
-	f, dial, err := serveonssh.New(
+	f, err := serveonssh.New(
 		*endpoint,
 		*socket,
 		&ssh.ClientConfig{
@@ -52,7 +52,7 @@ func main() {
 	httpc := http.Client{
 		Transport: &http.Transport{
 			DialContext: func(_ context.Context, _, _ string) (net.Conn, error) {
-				return dial()
+				return f.Dialer()()
 			},
 		},
 	}

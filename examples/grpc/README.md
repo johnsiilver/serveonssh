@@ -28,8 +28,3 @@ That's it, you should see output:
 2021/11/01 22:51:28 app.go:83: attempt(13) was successful
 ...
 ```
-
-## Notes
-
-### Might need to increase your ulimit
-Especially if running on OSX, ulimit starts at like 256. A ulimit -n 5000 should easily be enough to run this demo.
