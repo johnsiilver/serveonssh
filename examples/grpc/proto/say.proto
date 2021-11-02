@@ -1,0 +1,14 @@
+syntax = "proto3";
+package example.say;
+
+option go_package = "github.com/serveonssh/examples/grpc/proto/service";
+
+message Req {}
+
+message Resp {
+	string say = 1;
+}
+
+service Service{
+   rpc Say(Req) returns (Resp) {};
+}
